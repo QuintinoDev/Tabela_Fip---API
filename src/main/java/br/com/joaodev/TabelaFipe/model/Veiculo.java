@@ -1,0 +1,12 @@
+package br.com.joaodev.TabelaFipe.model;
+
+import com.fasterxml.jackson.annotation.JsonAlias;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public record Veiculo(@JsonAlias("Valor") String valor,
+                      @JsonAlias("Marcar") String marca,
+                      @JsonAlias("Modelo") String modelo,
+                      @JsonAlias("AnoModelo") Integer anoModelo,
+                      @JsonAlias("Combustivel") String combustivel) {
+}
